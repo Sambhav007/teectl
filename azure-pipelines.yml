@@ -27,4 +27,6 @@ stages:
               dir
               echo "teectl Version Result"
               teectl version
+              echo "teectl setup command Result"
+              teectl setup --kubernetes
               
