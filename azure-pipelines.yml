@@ -34,7 +34,7 @@ stages:
               az aks get-credentials --resource-group Demok8 --name traefikcluster
               kubectl get deployments --all-namespaces=true
               pwd 
-              echo "SPLIT NEWEEN PWD AND Dir"
+              echo "SPLIT NEWEEN PWD AND Dir command"
               dir
               echo "teectl setup command Result"
               teectl setup --kubernetes
