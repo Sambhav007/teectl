@@ -16,29 +16,7 @@ stages:
     -  job: copyteectlfromgithub
        displayName: 
        steps:
-       - task: PowerShell@2
-         inputs:
-          targetType: 'inline'
-          script: |
-            # Write your PowerShell commands here.
-            
-            #az login
-            #az account set --subscription 9f5e2100-3a33-4deb-aa07-ec5f521aebc3
-            #az aks get-credentials --resource-group Demok8 --name testingcluster
-            # List all deployments in all namespaces
-            #kubectl get deployments --all-namespaces=true
-            echo "pwd result"
-            pwd
-            #wget -O teectl_v2.1.7_linux_amd64.tar.gz https://s3.amazonaws.com/traefikee/binaries/v2.1.7/teectl_v2.1.7_linux_amd64.tar.gz
-            #tar -xzvf teectl_v2.1.7_linux_amd64.tar.gz
-            #cp /home/vsts/work/1/s/teectl /usr/local/bin
-            #cd /usr/local/bin
-            #pwd
-            echo "teectl Result"
-            #dir
-            #/home/vsts/work/1/s/teectl
-            "/home/vsts/work/1/s/teectl.exe version"
-            #teectl version
+
        - task: CmdLine@2
          inputs:
             script: |
@@ -46,6 +24,6 @@ stages:
               
               echo "teectl Result"
               dir
-              "/home/vsts/work/1/s/teectl.exe version"
-              teectl
-              teectl.exe
+              #"/home/vsts/work/1/s/teectl.exe version"
+              teectl version
+              #teectl.exe
