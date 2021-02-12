@@ -13,7 +13,7 @@ stages:
   - stage: teectl
     displayName: installed teectl and deploy service using teectl
     jobs:
-    -  job: copyteectlfromgithub
+    -  job: downloadAndTeectlVersionCheck
        displayName: 
        steps:
 
