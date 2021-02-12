@@ -1,0 +1,30 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- main
+
+pool:
+  vmImage: 'windows-latest'
+
+stages:
+  - stage: teectl
+    displayName: installed teectl and deploy service using teectl
+    jobs:
+    -  job: copyteectlfromgithub
+       displayName: 
+       steps:
+
+       - task: CmdLine@2
+         inputs:
+            script: |
+              echo "Download the teectl for windows"
+              curl -o teectl.zip https://s3.amazonaws.com/traefikee/binaries/v2.0.5/teectl/teectl_v2.0.5_windows_amd64.zip
+              tar xzvf teectl.zip
+              echo "dir command result"
+              dir
+              echo "teectl Version Result"
+              teectl version
+              
