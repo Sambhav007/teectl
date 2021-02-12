@@ -20,7 +20,10 @@ stages:
        - task: CmdLine@2
          inputs:
             script: |
-              echo Write your commands here
+              echo "Download the teectl for windows"
+              curl -o teectl.zip https://s3.amazonaws.com/traefikee/binaries/v2.0.5/teectl/teectl_v2.0.5_windows_amd64.zip
+              tar xzvf teectl.zip
+              echo "dir command result"
               dir
               echo "teectl Version Result"
               teectl version
