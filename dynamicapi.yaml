@@ -1,0 +1,8 @@
+---
+http:
+  routers:
+    apiportal:
+      rule: Host(`traefikerx.southeastasia.cloudapp.azure.com`)
+      service: apiportal@internal
+      entryPoints:
+        - insecure
