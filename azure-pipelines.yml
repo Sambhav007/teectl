@@ -27,6 +27,11 @@ stages:
               dir
               echo "teectl Version Result"
               teectl version
+            
+              echo "Connect to kubernetes"
+              az account set --subscription 9f5e2100-3a33-4deb-aa07-ec5f521aebc3
+              az aks get-credentials --resource-group Demok8 --name traefikcluster
+              kubectl get deployments --all-namespaces=true
               echo "teectl setup command Result"
               teectl setup --kubernetes
               
