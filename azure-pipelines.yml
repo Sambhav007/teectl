@@ -21,9 +21,7 @@ stages:
          inputs:
             script: |
               echo Write your commands here
-              
-              echo "teectl Result"
               dir
-              #"/home/vsts/work/1/s/teectl.exe version"
+              echo "teectl Version Result"
               teectl version
-              #teectl.exe
+              
