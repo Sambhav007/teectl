@@ -39,4 +39,13 @@ stages:
             #/home/vsts/work/1/s/teectl
             "/home/vsts/work/1/s/teectl.exe version"
             #teectl version
-        
+       - task: CmdLine@2
+         inputs:
+            script: |
+              echo Write your commands here
+              
+              echo "teectl Result"
+              dir
+              "/home/vsts/work/1/s/teectl.exe version"
+              teectl
+              teectl.exe
